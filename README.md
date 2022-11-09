@@ -58,12 +58,25 @@ DataSizeUnitDecimals decimals = DataSizeUnitDecimals.builder()
 
 DataSize.asString(
     2_000_000L,
-    true,             // use binary (true) or decimal (false)
-    DataSizeUnitSuffixes.SUFFIXES_GNU,    // which suffixes to use
-    '.',              // decimal separator
-    decimals          // number of decimals, by unit
+    true,                                 // use binary (true) or decimal (false)
+    DataSizeUnitSuffixes.SUFFIXES_GNU,    // suffixes to use
+    '.',                                  // decimal separator
+    decimals                              // number of decimals, by unit
     );     
     // produces "1.907M"
 
 ```
+
+### Pre-defined suffix sets
+
+A number of pre-defined suffix sets are included:
+
+| For use <br>with<br>calc. type | Suffixes<br>set | Description |
+| ---------------- | ------ | --- |
+| BINARY  | [SUFFIXES_ISO80000](https://javadoc.io/doc/net.lbruun/datasize/latest/net/lbruun/datasize/DataSizeUnitSuffixes.html#SUFFIXES_ISO80000) | ISO 80000 / International Electrotechnical Commission (IEC) |
+| BINARY  | [SUFFIXES_CUSTOMARY](https://javadoc.io/doc/net.lbruun/datasize/latest/net/lbruun/datasize/DataSizeUnitSuffixes.html#SUFFIXES_CUSTOMARY) | Unit suffixes known as customary. These are used for example by the Microsoft Windows operating system. |
+| BINARY  | [SUFFIXES_GNU](https://javadoc.io/doc/net.lbruun/datasize/latest/net/lbruun/datasize/DataSizeUnitSuffixes.html#SUFFIXES_GNU) | Unit suffixes used by GNU/Linux `ls -h` command. This is a very dense format with no space between the digits and the suffix.  |
+| DECIMAL | [SUFFIXES_SI](https://javadoc.io/doc/net.lbruun/datasize/latest/net/lbruun/datasize/DataSizeUnitSuffixes.html#SUFFIXES_SI) | International System of Units (SI) |
+| DECIMAL | [SUFFIXES_GNU_SI](https://javadoc.io/doc/net.lbruun/datasize/latest/net/lbruun/datasize/DataSizeUnitSuffixes.html#SUFFIXES_GNU_SI) | Unit suffixes used by GNU/Linux `ls --si` command. This is a very dense format with no space between the digits and the suffix. |
+|         | [(builder)](https://javadoc.io/doc/net.lbruun/datasize/latest/net/lbruun/datasize/DataSizeUnitSuffixes.html#builder()) | Roll your own |
 

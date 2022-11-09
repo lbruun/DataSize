@@ -35,6 +35,10 @@ public class DataSizeUnitSuffixes {
      * Unit suffixes according to International System of Units (SI). These are recommended for use with decimal
      * calculation.
      *
+     * <p>
+     * Intended usage: DECIMAL calculation.
+     *
+     * <p>
      * <table class="striped" style="text-align:left; margin-left:2em">
      * <caption style="display:none">SI Suffixes</caption>
      * <thead>
@@ -88,6 +92,10 @@ public class DataSizeUnitSuffixes {
      * Unit suffixes according to ISO 80000 / International Electrotechnical Commission (IEC). These are recommended for
      * use with binary calculation.
      *
+     * <p>
+     * Intended usage: BINARY calculation.
+     *
+     * <p>
      * <table class="striped" style="text-align:left; margin-left:2em">
      * <caption style="display:none">IEC suffixes</caption>
      * <thead>
@@ -141,6 +149,10 @@ public class DataSizeUnitSuffixes {
      * Unit suffixes known as <i>customary</i>. These are used for example by the Microsoft Windows operating system
      * together with binary calculation.
      *
+     * <p>
+     * Intended usage: BINARY calculation.
+     *
+     * <p>
      * <table class="striped" style="text-align:left; margin-left:2em">
      * <caption style="display:none">Customary suffixes</caption>
      * <thead>
@@ -194,6 +206,10 @@ public class DataSizeUnitSuffixes {
      * Unit suffixes used by GNU/Linux {@code ls -h} command together with binary calculation. This is a very dense
      * format with no space between the digits and the suffix.
      *
+     * <p>
+     * Intended usage: BINARY calculation.
+     *
+     * <p>
      * <table class="striped" style="text-align:left; margin-left:2em">
      * <caption style="display:none">GNU ls suffixes</caption>
      * <thead>
@@ -247,6 +263,10 @@ public class DataSizeUnitSuffixes {
      * Unit suffixes used by GNU/Linux {@code ls --si} command together with decimal calculation. This is a very dense
      * format with no space between the digits and the suffix.
      *
+     * <p>
+     * Intended usage: DECIMAL calculation.
+     *
+     * <p>
      * <table class="striped" style="text-align:left; margin-left:2em">
      * <caption style="display:none">GNU ls suffixes (SI)</caption>
      * <thead>

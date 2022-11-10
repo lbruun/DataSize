@@ -9,6 +9,7 @@ Minimal no-dep library dedicated to print human-readable byte sizes.
 ### Features
 
 * Blazingly fast
+* Small. Adds about 10KB to your project.
 * Supports both decimal calculation (1 kilobyte = 1000 bytes) as well as binary calculation (1 kikibyte = 1024 bytes).
 * Configurable:
     * Number of decimals (per unit type, for example for Megabytes print with 3 decimals)
@@ -79,6 +80,21 @@ A number of pre-defined suffix sets are included:
 | DECIMAL | [SUFFIXES_SI](https://javadoc.io/doc/net.lbruun/datasize/latest/net/lbruun/datasize/DataSizeUnitSuffixes.html#SUFFIXES_SI) | International System of Units (SI) |
 | DECIMAL | [SUFFIXES_GNU_SI](https://javadoc.io/doc/net.lbruun/datasize/latest/net/lbruun/datasize/DataSizeUnitSuffixes.html#SUFFIXES_GNU_SI) | Unit suffixes used by GNU/Linux `ls --si` command. This is a very dense format with no space between the digits and the suffix. |
 |         | [(builder)](https://javadoc.io/doc/net.lbruun/datasize/latest/net/lbruun/datasize/DataSizeUnitSuffixes.html#builder()) | Roll your own |
+
+
+
+## Performance
+
+The core fomatting routine is optimized for speed by:
+
+* Avoiding `String.format`, `DecimalFormat` and the like.
+* Avoiding costly `Math` functions. Only does integer arithmetics.
+* Favor integer comparison over integer multiplication
+
+Honestly, none of this matters if you are formatting a display of 50 files. But it matters if you are formatting a display of 50,000 files.
+
+Also, for accuracy, the routine avoids floting point completely. We don't want those mysterious
+rounding errors!
 
 
 ## Alternatives

@@ -106,9 +106,9 @@ public class DataSize implements Comparable<DataSize> {
      *
      * <p>
      * The method is optimized for extreme speed rather than accuracy. It uses truncation, not rounding. This means, as an
-     * example, that if 1099 is to be presented using parameters useBinary = false, useBinarySuffix = false,
-     * decimalSeparator = '.' and decimals for {@code KILO/KIBI unit} is 1, then it will be presented as {@code "1.0 KB"}
-     * rather than as {@code "1.1 KB"}.
+     * example, that if 1099 is to be presented using parameters useBinary = false, with {@link DataSizeUnitSuffixes#SUFFIXES_SI
+     * SI unit suffixes}, with {@link DataSizeUnitDecimals#DEFAULT default number of decimals} and with
+     * decimalSeparator = '.', then it will be presented as {@code "1.0 KB"} rather than as {@code "1.1 KB"}.
      *
      * @param value            input value, must be positive or zero.
      * @param useBinary        {@code true} to use binary calculation (1 kibibyte = 1024 bytes). {@code false} to use

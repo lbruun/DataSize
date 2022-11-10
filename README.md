@@ -80,3 +80,10 @@ A number of pre-defined suffix sets are included:
 | DECIMAL | [SUFFIXES_GNU_SI](https://javadoc.io/doc/net.lbruun/datasize/latest/net/lbruun/datasize/DataSizeUnitSuffixes.html#SUFFIXES_GNU_SI) | Unit suffixes used by GNU/Linux `ls --si` command. This is a very dense format with no space between the digits and the suffix. |
 |         | [(builder)](https://javadoc.io/doc/net.lbruun/datasize/latest/net/lbruun/datasize/DataSizeUnitSuffixes.html#builder()) | Roll your own |
 
+
+## Alternatives
+
+- `org.springframework.util.unit.DataSize`. From what I can tell it can only parse, not format.
+
+- [Apache Commons IO - FileUtils class](https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#byteCountToDisplaySize-long-). Does too heavy rounding, everything becomes GBs. Also not clear to me if it does both binary or decimal calculation .. or indeed which one it does?
+
